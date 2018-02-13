@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<project name="SimpleServlet" default="war">
+
+<target name="war" depends="clean,compile">
+    <mkdir dir="dist"/>
+    <war destfile="dist/SimpleServlet.war"  webxml="WEB-INF/web.xml">
+        <fileset dir=".">
+	<exclude name="build.xml"/>
+	<exclude name="dist"/>
+	<exclude name="src/**"/>
+	</fileset>
+    </war>
+</target>
+
+<target name="compile">
+    <javac destdir="WEB-INF/classes" srcdir="src" classpath="lib/javax.servlet-api-4.0.0-b07.jar">
+    </javac>
+</target>
+
+<target name="clean">
+	<delete dir="WEB-INF/classes/com"/>
+	<delete dir="dist" />
+</target>
+ 
+</project>

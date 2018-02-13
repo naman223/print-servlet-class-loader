@@ -1,0 +1,23 @@
+this servlet will find the class loader.
+--------------------------
+
+So what  I did now:
+
+I had SimpleServlet.war and deployed with target as server and virtual host. So same app available on server and virtual host.
+
+Now access app from server and virtual host and check class loader.
+
+If this understanding is correct then both ClassLoader are same. 
+
+
+--------------------------
+
+Did same in weblogic. Same app targeted from myserver and virtual host.
+
+Access them differently like http://localhost:7001/SimpleServlet/ and http://test.com:7001/SimpleServlet/.
+
+It's showing me same class loader. 
+
+--------------------------
+
+So showing same class loader for server and virtual host on both gf and wls.
